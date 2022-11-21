@@ -36,7 +36,7 @@ const Profile = () => {
 
 
             <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20}} icon={<Image source={require('../../assets/acc.png')}/>} buttonText={'Account Setting'}/>
-            <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20, marginTop: 20}} icon={<Image source={require('../../assets/logout.png')}/>} buttonText={'Logout'}/>
+            <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20, marginTop: 20}} icon={<Image source={require('../../assets/logout.png')}/>} buttonText={'Account Setting'}/>
 
  
         </View>
