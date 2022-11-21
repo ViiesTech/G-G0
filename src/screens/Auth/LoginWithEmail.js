@@ -51,7 +51,7 @@ const LoginWithEmail = ({navigation}) => {
 
         <View style={{width: '90%', alignSelf: 'center', marginBottom: 20}}>
           <Button
-            onPress={() => navigation.navigate('LoginWithEmail')}
+            onPress={() => navigation.navigate('Main')}
             buttonText="Sign In"
             buttonColor={colors.themeBrown}
             textColor="white"

@@ -3,10 +3,11 @@ import React from 'react'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
-const Button = ({buttonColor, buttonText, textColor, style, icon, onPress, disabled=false }) => {
+const Button = ({buttonColor, buttonText, textColor, style, icon, onPress, disabled=false ,Elevation}) => {
   return (
-    <TouchableOpacity disabled={disabled} onPress={onPress} activeOpacity={0.6} style={[styles.container, {backgroundColor: buttonColor}, style]}>
+    <TouchableOpacity disabled={disabled} onPress={onPress} activeOpacity={0.6} style={[styles.container, {backgroundColor: buttonColor, elevation:Elevation}, style]}>
         {icon}
+     
         <Text style={[styles.buttonText, {color: textColor}]}>{buttonText}</Text>
     </TouchableOpacity>
   )

@@ -24,8 +24,13 @@ const SignupVerification = ({navigation}) => {
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
-    navigation.navigate('Login');
+    
   };
+
+  const backToLogin =() => {
+    navigation.navigate('Login')
+    setModalVisible(!isModalVisible);
+  }
 
   const [count, setCount] = useState(30);
 
@@ -124,7 +129,7 @@ const SignupVerification = ({navigation}) => {
               buttonText={'Back To Login'}
               textColor={'white'}
               buttonColor={colors.themeBrown}
-              onPress={toggleModal}
+              onPress={()=> backToLogin()}
             />
           </View>
         </Modal>
