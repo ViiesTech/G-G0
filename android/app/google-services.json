@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "242454341329",
+    "project_id": "g-go-6713e",
+    "storage_bucket": "g-go-6713e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242454341329:android:ac68789cfd0ba3408047f0",
+        "android_client_info": {
+          "package_name": "com.godash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242454341329-73svos3ldfmhur6184df9qn4qoukbmfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU_5lxVb4IyQmTyXAue4u9In52grML4bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242454341329-73svos3ldfmhur6184df9qn4qoukbmfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

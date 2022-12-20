@@ -10,7 +10,7 @@ import EnterText from '../../components/EnterText';
 import HomeCard from '../../components/HomeCard';
 import Button from '../../components/Button';
 
-const StoreLocator = () => {
+const StoreLocator = ({navigation}) => {
     return (
         <View style={{ flex: 1, padding: 20 }}>
             <MainHeader Heading={"Store Locator"} txt={'Shopping for your needs is easier'} />
@@ -35,16 +35,16 @@ const StoreLocator = () => {
             </View>
             
             <Button
-            // onPress={() => navigation.navigate('Signup')}
-            buttonText="Create an account"
+            buttonText="Use my current location"
             buttonColor={colors.themeGrey}
             textColor="white"
             style={{borderColor: 'lightgrey'}}
+            onPress={()=> navigation.navigate('SearchProduct')}
           />
 
     <View style={{flex:1 , alignItems:'center', justifyContent:'center'}}>
 
-          <Image source={require('../../assets/cart.png')} style={{alignSelf:'center', marginTop:20}}/>
+          <Image source={require('../../assets/cartLogo.png')} style={{alignSelf:'center', marginTop:20}}/>
     </View>
 
         </View>

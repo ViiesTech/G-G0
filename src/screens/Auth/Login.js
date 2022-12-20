@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View, Image, ScrollView, StatusBar} from 'react-native';
-import React from 'react';
-import {images} from '../../assets';
+import { StyleSheet, Text, View, Image, ScrollView, StatusBar } from 'react-native';
+import React,{useState} from 'react';
+import { images } from '../../assets';
 import Logo from '../../components/Logo';
 import {
   widthPercentageToDP as wp,
@@ -10,9 +10,11 @@ import Button from '../../components/Button';
 import { colors } from '../../theme';
 
 
-const Login = ({navigation}) => {
+const Login = ({ navigation }) => {
+  
+
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <ScrollView
         contentContainerStyle={{
           width: '100%',
@@ -24,42 +26,42 @@ const Login = ({navigation}) => {
         <StatusBar backgroundColor="white" barStyle={'dark-content'} />
         <Logo />
         <Text style={styles.heading}>Sign in to your account</Text>
-        <View style={{width: '90%', alignSelf: 'center', marginBottom: 10}}>
+        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 10 }}>
           <Button
             buttonText="Sign in with google"
             buttonColor="white"
             textColor={'black'}
-            style={{borderColor: 'lightgrey'}}
+            style={{ borderColor: 'lightgrey' }}
             icon={<Image source={images.googleIcon} />}
           />
         </View>
-        <View style={{width: '90%', alignSelf: 'center', marginBottom: 10}}>
+        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 10 }}>
           <Button
             buttonText="Sign in with facebook"
             buttonColor="white"
             textColor={'black'}
-            style={{borderColor: 'lightgrey'}}
+            style={{ borderColor: 'lightgrey' }}
             icon={<Image source={images.facebookIcon} />}
           />
         </View>
-        <View style={{width: '90%', alignSelf: 'center', marginBottom: 20}}>
+        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 20 }}>
           <Button
             onPress={() => navigation.navigate('LoginWithEmail')}
             buttonText="Continue with email"
             buttonColor={colors.themeBrown}
             textColor='white'
-            style={{borderColor: 'lightgrey'}}
+            style={{ borderColor: 'lightgrey' }}
           />
         </View>
-        <View style={{width:'90%', height: 1, backgroundColor: 'lightgrey'}} />
-        <Text style={{marginVertical: 20, color: 'black'}}>Don't have an account?</Text>
-        <View style={{width: '90%', alignSelf: 'center'}}>
+        <View style={{ width: '90%', height: 1, backgroundColor: 'lightgrey' }} />
+        <Text style={{ marginVertical: 20, color: 'black' }}>Don't have an account?</Text>
+        <View style={{ width: '90%', alignSelf: 'center' }}>
           <Button
             onPress={() => navigation.navigate('Signup')}
             buttonText="Create an account"
             buttonColor={colors.themeGrey}
             textColor='white'
-            style={{borderColor: 'lightgrey'}}
+            style={{ borderColor: 'lightgrey' }}
           />
         </View>
 

@@ -9,8 +9,9 @@ import { colors } from '../../theme';
 import EnterText from '../../components/EnterText';
 import HomeCard from '../../components/HomeCard';
 import Button from '../../components/Button';
+import auth from '@react-native-firebase/auth';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
     return (
         <View style={{ padding: 20 }}>
             <Text style={{ fontSize: hp('3%'), fontWeight: 'bold', color: colors.themeBlack }}>Profile</Text>
@@ -36,7 +37,7 @@ const Profile = () => {
 
 
             <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20}} icon={<Image source={require('../../assets/acc.png')}/>} buttonText={'Account Setting'}/>
-            <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20, marginTop: 20}} icon={<Image source={require('../../assets/logout.png')}/>} buttonText={'Account Setting'}/>
+            <Button Elevation={4} buttonColor={'white'} style={{borderColor: 'white', justifyContent:'flex-start' , alignItems:'center', paddingHorizontal: 20, marginTop: 20}} icon={<Image source={require('../../assets/logout.png')}/>} buttonText={'Logout'} onPress={ () => auth().signOut() }/>
 
  
         </View>
