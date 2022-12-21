@@ -42,16 +42,11 @@ const Discount = ({navigation}) => {
                         return (
 
                             <View style={{ flexDirection: 'row', height: hp('20%'), width: wp('90%'), alignSelf: 'center', backgroundColor: 'white', borderWidth: 1, borderRadius: 10, borderColor: colors.themeGrey, marginTop: 20, alignItems: 'center', padding: 20 , marginTop:20}}>
-
                                 <Image source={item.img} style={{ height: 70, width: 70, }} resizeMode={'contain'} />
-
                                 <View style={{ marginLeft: 20 }}>
-
                                     <Text style={{ fontSize: hp('2.5%'), fontWeight: 'bold', color: colors.themeBlack, width: wp('50%'), }}>Enjoy 20% Discount on Lay's this week</Text>
-
                                 </View>
                             </View>
-
                         )
                     }}
                 />

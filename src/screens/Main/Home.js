@@ -8,7 +8,6 @@ import {
 import { colors } from '../../theme';
 import EnterText from '../../components/EnterText';
 import HomeCard from '../../components/HomeCard';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, incrementByAmount } from '../../redux/slice/AddToCartSlice'

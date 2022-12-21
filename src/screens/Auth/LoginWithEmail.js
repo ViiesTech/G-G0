@@ -73,12 +73,12 @@ const LoginWithEmail = ({ navigation }) => {
           <Input placeholder="username or email" onchangeText={(txt) => { setUserData({ ...userData, email: txt }) }} value={userData.email} />
         </View>
 
-        <View style={{ width: '90%', alignSelf: 'center' }}>
-          <Text style={styles.smallText}>forgot password?</Text>
+        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 0, marginTop: 15 }}>
+          <Input placeholder="password" secureTextEntry={true} onchangeText={(txt) => { setUserData({ ...userData, password: txt }) }} value={userData.password} />
         </View>
 
-        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 20 }}>
-          <Input placeholder="password" secureTextEntry={true} onchangeText={(txt) => { setUserData({ ...userData, password: txt }) }} value={userData.password} />
+        <View style={{ width: '90%', alignSelf: 'center' }}>
+          <Text style={styles.smallText}>forgot password?</Text>
         </View>
 
         <View style={{ width: '90%', alignSelf: 'center', marginBottom: 20 }}>
@@ -96,7 +96,7 @@ const LoginWithEmail = ({ navigation }) => {
         </Text>
         <View style={{ width: '90%', alignSelf: 'center' }}>
           <Button
-            onPress={() => navigation.navigate('Signup')}
+            onPress={() => navigation.navigate('SelectAccType')}
             buttonText="Create an account"
             buttonColor={colors.themeGrey}
             textColor="white"

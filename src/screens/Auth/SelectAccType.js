@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 import { colors } from '../../theme';
 
 
-const Login = ({ navigation }) => {
+const SelectAccType = ({ navigation }) => {
   
 
   return (
@@ -25,40 +25,21 @@ const Login = ({ navigation }) => {
         }}>
         <StatusBar backgroundColor="white" barStyle={'dark-content'} />
         <Logo />
-        <Text style={styles.heading}>Sign in to your account</Text>
-        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 10 }}>
+        <Text style={styles.heading}>Welcome to <Text style={{color: colors.themeBrown}} >G-Go</Text></Text>
+        <Text style={styles.subText} >Create an account as user or store owner</Text>
+        <View style={{ width: '90%', alignSelf: 'center' }}>
           <Button
-            buttonText="Sign in with google"
-            buttonColor="white"
-            textColor={'black'}
-            style={{ borderColor: 'lightgrey' }}
-            icon={<Image source={images.googleIcon} />}
-          />
-        </View>
-        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 10 }}>
-          <Button
-            buttonText="Sign in with facebook"
-            buttonColor="white"
-            textColor={'black'}
-            style={{ borderColor: 'lightgrey' }}
-            icon={<Image source={images.facebookIcon} />}
-          />
-        </View>
-        <View style={{ width: '90%', alignSelf: 'center', marginBottom: 20 }}>
-          <Button
-            onPress={() => navigation.navigate('LoginWithEmail')}
-            buttonText="Continue with email"
+            onPress={() => navigation.navigate('Signup')}
+            buttonText="User"
             buttonColor={colors.themeBrown}
             textColor='white'
             style={{ borderColor: 'lightgrey' }}
           />
         </View>
-        <View style={{ width: '90%', height: 1, backgroundColor: 'lightgrey' }} />
-        <Text style={{ marginVertical: 20, color: 'black' }}>Don't have an account?</Text>
         <View style={{ width: '90%', alignSelf: 'center' }}>
           <Button
-            onPress={() => navigation.navigate('SelectAccType')}
-            buttonText="Create an account"
+            onPress={() => navigation.navigate('OwnerSignup')}
+            buttonText="Store Owner"
             buttonColor={colors.themeGrey}
             textColor='white'
             style={{ borderColor: 'lightgrey' }}
@@ -70,13 +51,18 @@ const Login = ({ navigation }) => {
   );
 };
 
-export default Login;
+export default SelectAccType;
 
 const styles = StyleSheet.create({
   heading: {
     fontSize: wp('6%'),
     color: 'black',
     fontWeight: 'bold',
-    marginVertical: 50
+    marginTop: 50
   },
+  subText: {
+    fontSize: hp('2%'),
+    marginVertical: 10,
+    color:'black'
+  }
 });
